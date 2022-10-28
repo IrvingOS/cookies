@@ -13,11 +13,13 @@ export default class Cookies {
   private cookies: { [name: string]: Cookie };
   private changeListeners: CookieChangeListener[] = [];
 
+  // 是否存在 DOM
   private HAS_DOCUMENT_COOKIE: boolean = false;
 
   constructor(cookies?: string | object | null, options?: CookieParseOptions) {
     this.cookies = parseCookies(cookies, options);
 
+    // 为了捕获错误？
     new Promise(() => {
       this.HAS_DOCUMENT_COOKIE = hasDocumentCookie();
     }).catch(() => {});

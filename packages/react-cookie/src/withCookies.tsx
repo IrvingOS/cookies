@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: js
+ * @Version: 1.0
+ * @Author: TimeChaser 1872101334@qq.com
+ * @Date: 2022-10-27 16:28:29
+ * @LastEditors: TimeChaser 1872101334@qq.com
+ * @LastEditTime: 2022-10-28 16:21:34
+ */
 import Cookies from 'universal-cookie';
 import * as React from 'react';
 import hoistStatics from 'hoist-non-react-statics';
@@ -60,6 +68,7 @@ export default function withCookies<T extends ReactCookieProps>(
     }
   }
 
+  // 转发 Ref 的组件
   const ForwardedComponent: any = React.forwardRef((props: any, ref: any) => {
     return (
       <Consumer>
