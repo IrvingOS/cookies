@@ -67,6 +67,5 @@
       "path": "./packages/react-cookie/lib/index.js",
       "limit": "10 KB"
     }
-  ],
-  "dependencies": {}
+  ]
 }

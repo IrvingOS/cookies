@@ -10,7 +10,6 @@ export default function useCookies<T extends string, U = { [K in T]?: any }>(
   (name: T, value: Cookie, options?: CookieSetOptions) => void,
   (name: T, options?: CookieSetOptions) => void
 ] {
-  // 使用 useCookies 函数的组件必须是 CookiesProvider 的子组件，否则上下文中拿不到 CookiesContext
   const cookies = useContext(CookiesContext);
   if (!cookies) {
     throw new Error('Missing <CookiesProvider>');
